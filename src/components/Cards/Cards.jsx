@@ -1,18 +1,9 @@
-// import React from "react";
-
-// const Cards = () => {
-//   return <div>
-
-//   </div>;
-// };
-
-// export default Cards;
-
 import React, { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
+import Navbar from "../Navbar/Navbar";
 
 function Cards() {
   const initialSelectedCard = {
@@ -56,6 +47,7 @@ function Cards() {
 
   return (
     <>
+      <Navbar />
       <div id="event" className="page-layout ">
         <div className="card-layout">
           <div className="selected-card-content">
@@ -117,11 +109,11 @@ export default Cards;
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "./Cards.css";
-// import "../../WinJs.js";
+// // import "../../WinJS.js";
 
 // (function (global, undefined) {
 //   "use strict";
-//   undefinedVariable = {};
+//   var undefinedVariable = {};
 //   undefinedVariable.prop = 5;
 
 //   function initializeProperties(target, members) {
@@ -146,16 +138,16 @@ export default Cards;
 //           continue;
 //         }
 //       }
-//       if (!enumerable) {
-//         properties = properties || {};
-//         properties[key] = {
-//           value: member,
-//           enumerable: enumerable,
-//           configurable: true,
-//           writable: true,
-//         };
-//         continue;
-//       }
+//       // if (!enumerable) {
+//       //   properties = properties || {};
+//       //   properties[key] = {
+//       //     value: member,
+//       //     enumerable: enumerable,
+//       //     configurable: true,
+//       //     writable: true,
+//       //   };
+//       //   continue;
+//       // }
 //       target[key] = member;
 //     }
 //     if (properties) {
