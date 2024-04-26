@@ -1,5 +1,5 @@
-import { CardContent, Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { CardContent, Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Component() {
   return (
@@ -8,19 +8,25 @@ export default function Component() {
         <Card className="w-64 cursor-pointer border-2 border-transparent transition-colors hover:border-gray-300 dark:hover:border-gray-700">
           <CardContent className="flex flex-col items-start gap-2 p-4">
             <h4 className="text-lg font-semibold">Project A</h4>
-            <p className="text-sm text-gray-500 dark:text-gray-400">This is a description of Project A.</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              This is a description of Project A.
+            </p>
           </CardContent>
         </Card>
         <Card className="w-64 cursor-pointer border-2 border-transparent transition-colors hover:border-gray-300 dark:hover:border-gray-700">
           <CardContent className="flex flex-col items-start gap-2 p-4">
             <h4 className="text-lg font-semibold">Project B</h4>
-            <p className="text-sm text-gray-500 dark:text-gray-400">This is a description of Project B.</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              This is a description of Project B.
+            </p>
           </CardContent>
         </Card>
         <Card className="w-64 cursor-pointer border-2 border-transparent transition-colors hover:border-gray-300 dark:hover:border-gray-700">
           <CardContent className="flex flex-col items-start gap-2 p-4">
             <h4 className="text-lg font-semibold">Project C</h4>
-            <p className="text-sm text-gray-500 dark:text-gray-400">This is a description of Project C.</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              This is a description of Project C.
+            </p>
           </CardContent>
         </Card>
       </div>
@@ -34,12 +40,13 @@ export default function Component() {
           </div>
           <div className="flex-1 overflow-auto">
             <p>
-              This is the main content area for Project A. When a card is selected, the header and a button to open a
-              text editor will be displayed here.
+              This is the main content area for Project A. When a card is
+              selected, the header and a button to open a text editor will be
+              displayed here.
             </p>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

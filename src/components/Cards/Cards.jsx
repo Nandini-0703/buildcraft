@@ -4,41 +4,148 @@ import { Button, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
 import Navbar from "../Navbar/Navbar";
+import MonacoEditor from "../ui/monaco";
 
 function Cards() {
   const initialSelectedCard = {
     id: 1,
-    title: "",
-    content: "",
-    img: "/assets/Event/HackNSolve.webp",
+    title: "Neural Network",
+    content:
+      "Harness the power of artificial intelligence to build an application that can recognize text from images.",
+    links: [
+      {
+        titleone: "C#: Neural Network OCR",
+        url: "https://www.codeproject.com/Articles/11285/Neural-Network-OCR",
+      },
+      {
+        titleone: "F#: Building Neural Networks in F#",
+        url: "https://towardsdatascience.com/building-neural-networks-in-f-part-1-a2832ae972e6",
+      },
+      {
+        titleone: "Go: Build a multilayer perceptron with Golang",
+        url: "https://made2591.github.io/posts/neuralnetwork",
+      },
+      {
+        titleone: "Python: A Neural Network in 11 lines of Python",
+        url: "https://iamtrask.github.io/2015/07/12/basic-python-network/",
+      },
+    ],
   };
   const [selectedCard, setSelectedCard] = useState(initialSelectedCard);
+  const [clicked, setClicked] = useState(false);
 
   const cards = [
     {
       id: 1,
-      title: "Blockchain",
-      content: "",
+      title: "Neural Network",
+      content:
+        "Harness the power of artificial intelligence to build an application that can recognize text from images. ",
+      links: [
+        {
+          titleone: "C#: Neural Network OCR",
+          url: "https://www.codeproject.com/Articles/11285/Neural-Network-OCR",
+        },
+        {
+          titleone: "F#: Building Neural Networks in F#",
+          url: "https://towardsdatascience.com/building-neural-networks-in-f-part-1-a2832ae972e6",
+        },
+        {
+          titleone: "Go: Build a multilayer perceptron with Golang",
+          url: "https://made2591.github.io/posts/neuralnetwork",
+        },
+        {
+          titleone: "Python: A Neural Network in 11 lines of Python",
+          url: "https://iamtrask.github.io/2015/07/12/basic-python-network/",
+        },
+      ],
     },
     {
       id: 2,
-      title: "AR/VR",
-      content: "",
+      title: "Operating System",
+      content:
+        "Delve into the core of a computer system by building your own operating system. ",
+      links: [
+        {
+          titleone: "Assembly: Writing a Tiny x86 Bootloader",
+          url: "http://joebergeron.io/posts/post_two.html",
+        },
+        {
+          titleone: "C++: Writing a Bootloader",
+          url: "http://3zanders.co.uk/2017/10/13/writing-a-bootloader/",
+        },
+        {
+          titleone: "Rust: Writing an OS in Rust",
+          url: "https://os.phil-opp.com/",
+        },
+        {
+          titleone: "C: How to create an OS from scratch",
+          url: "https://github.com/cfenollosa/os-tutorial",
+        },
+      ],
     },
     {
       id: 3,
-      title: "Machine Learning",
-      content: "",
+      title: "Build Your Own Search Engine",
+      content:
+        "Become a master of information retrieval by crafting your own search engine. This project will equip you with the knowledge to crawl and index web pages, enabling users to find the information they need efficiently.",
+      links: [
+        {
+          titleone: "CSS: A search engine in CSS",
+          url: "https://stories.algolia.com/a-search-engine-in-css-b5ec4e902e97",
+        },
+        {
+          titleone: "Python: Making text search learn from feedback",
+          url: "https://medium.com/filament-ai/making-text-search-learn-from-feedback-4fe210fd87b0",
+        },
+        {
+          titleone: "Python: Building a Vector Space Indexing Engine in Python",
+          url: "https://boyter.org/2010/08/build-vector-space-search-engine-python/",
+        },
+        {
+          titleone: "Python: Finding Important Words in Text Using TF-IDF",
+          url: "https://stevenloria.com/tf-idf/",
+        },
+      ],
     },
     {
       id: 4,
-      title: "Artificial Intelligence",
-      content: "",
+      title: "Build Your Own Text Editor",
+      content:
+        "Craft a powerful tool for writing and editing text. This project will introduce you to the fundamentals of user interface development and text manipulation.  Learn how to build a program that caters to the needs of writers and programmers alike.",
+      links: [
+        {
+          titleone: "C#: Neural Network OCR",
+          url: "https://www.codeproject.com/Articles/11285/Neural-Network-OCR",
+        },
+        {
+          titleone: "F#: Building Neural Networks in F#",
+          url: "https://towardsdatascience.com/building-neural-networks-in-f-part-1-a2832ae972e6",
+        },
+        {
+          titleone: "Go: Build a multilayer perceptron with Golang",
+          url: "https://made2591.github.io/posts/neuralnetwork",
+        },
+        {
+          titleone: "Python: A Neural Network in 11 lines of Python",
+          url: "https://iamtrask.github.io/2015/07/12/basic-python-network/",
+        },
+      ],
     },
     {
       id: 5,
-      title: "Development",
-      content: "",
+      title: "Build Your Own Web Browser",
+      content:
+        "Craft a powerful tool for writing and editing text. This project will introduce you to the fundamentals of user interface development and text manipulation.  Learn how to build a program that caters to the needs of writers and programmers alike.",
+      links: [
+        {
+          title: "Rust: Let's build a browser engine",
+          url: "https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html",
+        },
+        {
+          title: "Python: Browser Engineering",
+          url: "https://browser.engineering/",
+        },
+      ],
     },
   ];
   const handleCardClick = (card) => {
@@ -48,18 +155,47 @@ function Cards() {
   return (
     <>
       <Navbar />
-      <div id="event" className="page-layout ">
-        <div className="card-layout">
+      <div id="event" className="page-layout">
+        <div className="card-layout ">
           <div className="selected-card-content">
             {selectedCard && (
               <div className="scard">
-                <Card className="selected-card-details bg-center bg-cover">
+                <Card className="selected-card-details bg-center bg-cover bg-black ">
                   <Card.Body>
-                    <Card.Title className="text-7xl font-semibold text-red-950 uppercase text-black">
-                      <MonacoEditor />
+                    <Card.Title className="text-4xl font-semibold text-red-950 uppercase text-white">
+                      {/* <MonacoEditor /> */}
+                      {selectedCard.title}
                     </Card.Title>
-                    <Card.Text>{selectedCard.content}</Card.Text>
+                    <Card.Text className="text-yellow-500 text-wrap ">
+                      {selectedCard.content}
+                    </Card.Text>
+                    <Card.Text className="text-white">
+                      {selectedCard &&
+                        selectedCard.links &&
+                        selectedCard.links.map((link) => (
+                          <div key={link.url}>
+                            {link.titleone}
+                            <ul>
+                              <li>
+                                <a src={link.url}>{link.url}</a>
+                              </li>
+                            </ul>
+                          </div>
+                        ))}
+                    </Card.Text>
                   </Card.Body>
+                  {clicked ? (
+                    <MonacoEditor className="border border-blue-500" />
+                  ) : (
+                    " "
+                  )}
+                  <Button
+                    className="mt-2"
+                    size="sm"
+                    onClick={() => setClicked(true)}
+                  >
+                    Open Text Editor
+                  </Button>
                 </Card>
               </div>
             )}
@@ -82,14 +218,14 @@ function Cards() {
                     style={{ backgroundImage: `url(${card.img})` }}
                     className={`cursor-pointer bg-center individual-cards bg-cover  ${
                       selectedCard.id === card.id ? "border-primary" : ""
-                    }`}
+                    } w-64 cursor-pointer border-2 border-transparent transition-colors hover:border-gray-300 dark:hover:border-gray-700 `}
                     onClick={() => handleCardClick(card)}
                   >
                     <Card.Body>
                       <Card.Title className="text-red-950 font-semibold text-black">
                         {card.title}
                       </Card.Title>
-                      <Card.Text>{card.content}</Card.Text>
+                      {/* <Card.Text>{card.content}</Card.Text> */}
                     </Card.Body>
                   </Card>
                 </div>
