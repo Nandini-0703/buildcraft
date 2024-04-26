@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Card } from "react-bootstrap";
+import MonacoEditor from "../ui/monaco";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
@@ -56,7 +57,8 @@ function Cards() {
                 <Card className="selected-card-details bg-center bg-cover">
                   <Card.Body>
                     <Card.Title className="text-7xl font-semibold text-red-950 uppercase text-black">
-                      {selectedCard.title}
+                      {/* editor here */}
+                    <MonacoEditor language="javascript" />
                     </Card.Title>
                     <Card.Text>{selectedCard.content}</Card.Text>
                   </Card.Body>
@@ -87,7 +89,7 @@ function Cards() {
                   >
                     <Card.Body>
                       <Card.Title className="text-red-950 font-semibold text-black">
-                        {card.title}
+                      {card.title}
                       </Card.Title>
                       <Card.Text>{card.content}</Card.Text>
                     </Card.Body>
