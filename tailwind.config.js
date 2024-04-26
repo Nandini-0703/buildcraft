@@ -20,9 +20,9 @@ const {
 module.exports = {
   content: [
     // your paths
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx,js,jsx}",
   ],
-  darkMode: "class",
+  darkMode: ["class", "[data-theme$=\"dark\"]"],
   theme: {
     extend: {
       animation: {
@@ -54,5 +54,3 @@ function addVariablesForColors({ addBase, theme }) {
     ":root": newVars,
   });
 }
-
-
