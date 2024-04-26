@@ -56,39 +56,7 @@ function StickySections() {
         className="frame frame--header"
         style={{ backgroundImage: "url(img/9.png)" }}
       >
-        <h1 className="frame__title">Sticky Sections</h1>
-        <a className="frame__back" href="https://tympanus.net/codrops/?p=75532">
-          Article
-        </a>
-        <a
-          className="frame__prev"
-          href="http://tympanus.net/Development/ScrollCarousel/"
-        >
-          Previous demo
-        </a>
-        <a
-          className="frame__sub"
-          href="https://tympanus.net/codrops/collective/"
-        >
-          Subscribe to our frontend news
-        </a>
-        <nav className="frame__demos">
-          <a href="index.html">1</a>
-          <a href="index2.html">2</a>
-          <a href="index3.html">3</a>
-          <a href="index4.html">4</a>
-          <a href="index5.html">5</a>
-          <span>6</span>
-          <a href="index7.html">7</a>
-          <a href="index8.html">8</a>
-          <a href="index9.html">9</a>
-          <a href="index10.html">10</a>
-          <a href="index11.html">11</a>
-          <a href="index12.html">12</a>
-          <a href="index13.html">13</a>
-          <a href="index14.html">14</a>
-          <a href="index15.html">15</a>
-        </nav>
+        
         <div className="frame__heading">
           <h2 className="content__title">
             <i>The</i> Emissions
@@ -206,20 +174,6 @@ function StickySections() {
         <img className="content__img spacer" src="img/7.png" />
       </div>
       <footer className="frame frame--footer">
-        <p className="frame__credits">
-          <a href="https://www.vecteezy.com/members/annazdsgn">
-            Images by Annas Muslimin
-          </a>{" "}
-          on Vecteezy
-        </p>
-        <p className="frame__author">
-          <span>
-            Made by <a href="https://www.twitter.com/codrops">@codrops</a>
-          </span>{" "}
-          <span>
-            <a href="mailto:crnacura@gmail.com">Hire us</a>
-          </span>
-        </p>
       </footer>
     </div>
   );
