@@ -36,8 +36,8 @@ export default function AuroraBackgroundDemo() {
           </button>
         </motion.div>
 
-        {/* <StickySections /> */}
       </AuroraBackground>
+      <StickySections />
     </div>
   );
 }
