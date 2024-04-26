@@ -293,6 +293,7 @@ i {
 }
 
 .text-large {
+  color: azure;
   font-size: clamp(1.5rem, 5vw, 3rem);
   max-width: 900px;
   margin: 0 0 0.85em 0;
@@ -387,6 +388,7 @@ i {
 }
 
 .content__title {
+  color: #fff;
   grid-area: content-title;
   letter-spacing: -0.095em;
   text-transform: uppercase;
@@ -396,8 +398,13 @@ i {
   margin: 0;
   font-variation-settings: "slnt" 0, "wdth" 400, "wght" 900, "INKT" 400;
 }
+.text-meta{
+  font-size: 15px;
+  color: #e1e1e1;
+}
 
 .content__text {
+  color: #c7c7c7;
   margin: 0;
   max-width: 500px;
   grid-area: content-text;
